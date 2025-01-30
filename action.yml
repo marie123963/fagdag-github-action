@@ -1,0 +1,5 @@
+name: "IntroducedBy Checker"
+description: "Scans code for PackageReferences marked with IntroducedBy attribute and deletes them"
+runs:
+  using: "docker"
+  image: "Dockerfile"
