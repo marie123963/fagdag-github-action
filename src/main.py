@@ -1,10 +1,10 @@
 import os
 from github import Github, Auth
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 if __name__ == '__main__':
 
-    load_dotenv()
+    #load_dotenv()
     acces_token = os.environ.get('GITHUB_TOKEN')
     repo_uri = os.environ.get('GITHUB_REPOSITORY')
     pr_number = int(os.getenv('GITHUB_REF').split('/')[-2])
