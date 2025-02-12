@@ -13,6 +13,7 @@ if __name__ == '__main__':
         raise Exception('Could not find repository')
     token = Auth.Token(acces_token)
 
+
     github = Github(auth=token)
     repo = github.get_repo(repo_uri)
 
