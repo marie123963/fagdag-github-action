@@ -1,5 +1,5 @@
-name: "IntroducedBy Checker"
-description: "Scans code for PackageReferences marked with IntroducedBy attribute and deletes them"
+name: "Fagdag custom action"
+description: "Create whatever you want!"
 runs:
   using: "docker"
   image: "Dockerfile"
