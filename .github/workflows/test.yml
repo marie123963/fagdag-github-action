@@ -1,0 +1,13 @@
+name: 💅 Hermegås 💅
+on:
+  pull_request
+
+jobs: 
+ comment:
+    runs-on: ubuntu-latest
+    name: Hermegås
+    steps:
+      - name: goosy
+        uses: henriettelienrebnor/Fagdag@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
