@@ -17,3 +17,5 @@ if __name__ == '__main__':
     
     latest = repo.get_commits()[0]
     message = latest.commit.message
+    
+    
