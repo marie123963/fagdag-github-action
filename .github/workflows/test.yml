@@ -4,6 +4,9 @@ on:
 jobs: 
  comment:
     runs-on: ubuntu-latest
+    permissions:
+        contents: read 
+        pull-requests: read  
     name: Hermegås
     steps:
       - name: goosy

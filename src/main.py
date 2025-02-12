@@ -13,13 +13,12 @@ if __name__ == '__main__':
         raise Exception('Could not find repository')
     token = Auth.Token(acces_token)
 
-
     github = Github(auth=token)
     repo = github.get_repo(repo_uri)
 
     pull_request = repo.get_pull(pr_number)
     
-    def get_latest_message(pr):
+    def get_latest_message():
         commits_messages = [c.commit.message for c in pull_request.get_commits()]
         if (len(commits_messages) > 0) :
             return commits_messages[-1]
