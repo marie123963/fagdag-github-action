@@ -25,6 +25,6 @@ if __name__ == '__main__':
         else:
             return ""
         
-    latest = get_latest_message(pull_request)
+    latest = get_latest_message()
     if latest:
         pull_request.create_issue_comment(f"💅{latest}💅")
