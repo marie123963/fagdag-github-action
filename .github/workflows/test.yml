@@ -1,13 +1,16 @@
 name: 💅 Hermegås 💅
 on:
   pull_request
-
 jobs: 
  comment:
     runs-on: ubuntu-latest
+    permissions:
+        contents: read 
+        pull-requests: write  
     name: Hermegås
     steps:
       - name: goosy
-        uses: henriettelienrebnor/Fagdag@main
+        uses: henriettelienrebnor/Fagdag@more_test
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+          PR_NUMBER: ${{ github.event.number }}
