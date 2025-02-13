@@ -1,28 +1,12 @@
 import re
 
-def is_haiku(text):
+def is_haiku(commit_message: str) -> bool:
     """Check if a given text follows the 5-7-5 haiku pattern."""
-    lines = text.strip().split("-") 
-    if len(lines) != 3:
-        return False  
+    raise NotImplementedError("TODO")
 
-    syllable_counts = [count_syllables_in_line(line) for line in lines]
-    for count in syllable_counts:
-        print(count)
-    return syllable_counts == [5, 7, 5]
+def count_syllables_in_line(line: str) -> int:
+    raise NotImplementedError("TODO")
 
-def count_syllables_in_line(line):
-    """Count total syllables in a line.""" 
-    words = line.strip().split(" ")  # Extract words
-    return sum(count_syllables(word) for word in words)
-
-def count_syllables(word):
+def count_syllables(word: str) -> int:
     """Count vowel groups in a word. Remove silent e unless word ends with le"""
-    word = word.lower()
-    if word.endswith("e") and not word.endswith("le"):
-        word = word[:-1]  
-        
-    # Count vowel groups
-    syllables = re.findall(r'[aeiouy]+', word)
-    return max(1, len(syllables))  
-
+    raise NotImplementedError("TODO")

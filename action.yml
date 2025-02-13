@@ -1,5 +1,11 @@
-name: "Haiku commit art generator"
-description: "Checks if the latest commit message is a haiku and generates ascii art"
+name: "Haiku Art Generator"
+description: "Generates haiku art"
+inputs:
+  PR_NUMBER:
+    description: "Pull Request Number"
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
+  env:
+    PR_NUMBER: ${{ inputs.PR_NUMBER }}

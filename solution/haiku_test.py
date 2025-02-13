@@ -1,11 +1,12 @@
 import unittest
-from haiku_checker import count_syllables, is_haiku
+from solution.haiku_checker import count_syllables, is_haiku
 
 class TestHaikuChecker(unittest.TestCase):
 
     def test_syllables(self):
         self.assertEqual(count_syllables("silence"), 2)
         self.assertEqual(count_syllables("beautiful"), 3)
+        self.assertEqual(count_syllables("rhythm"), 1) 
         self.assertEqual(count_syllables("table"), 2)
         self.assertEqual(count_syllables("sky"), 1)
         self.assertEqual(count_syllables("hmm"), 1)  
