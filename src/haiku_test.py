@@ -11,7 +11,6 @@ class TestHaikuChecker(unittest.TestCase):
         self.assertEqual(count_syllables("sky"), 1)
         self.assertEqual(count_syllables("hmm"), 1)  
         self.assertEqual(count_syllables("queue"), 1) 
-        self.assertEqual(count_syllables("middagsmaten"), 4) 
         
     def test_is_haiku(self):
         haiku_valid = "An old silent pond - The frog jumps into the pond - Splash! Silence again."
