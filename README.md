@@ -6,13 +6,15 @@ A haiku is a Japanese poem of seventeen syllables, in three lines of five, seven
     A frog jumps into the pond,
     splash! Silence again
 
-This action will check if the latest commit message is a haiku. The message is a haiku if the following requirements are met:
+This action checks if the latest commit message is a haiku. The commit message is a haiku if the following requirements are met:
 1) Consitst of three lines, each line must separated by a dash (-)
 2) The first line consits of five syllables
 3) The second line consitst of seven syllables
 4) The third line consits of five syllables
 
-If the commit message is a haiku then the action will take the contents of the message and generate ascii art. The ascii art will then be written to a file poetry.md in the following format:
+If the commit message is a haiku the action will take its contents and generate ascii art. The art is then written to a file poetry.md. 
+
+Example format:
 
 ```
     _                  _     _       _ _            _   
