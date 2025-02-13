@@ -1,5 +1,5 @@
-name: "Fagdag custom action"
-description: "Create whatever you want!"
+name: "Haiku commit art generator"
+description: "Checks if the latest commit message is a haiku and generates ascii art"
 runs:
   using: "docker"
   image: "Dockerfile"

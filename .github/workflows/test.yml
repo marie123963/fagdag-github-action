@@ -1,15 +1,19 @@
-name: Haiku
+name: Haiku Commit Art Generator
 on:
   pull_request
+  
 jobs: 
- comment:
+ generate_haiku_art:
     runs-on: ubuntu-latest
     permissions:
         contents: write 
         pull-requests: write  
-    name: Hermegås
+
     steps:
-      - name: goosy
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate haiku art
         uses: henriettelienrebnor/Fagdag@main
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
