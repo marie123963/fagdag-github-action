@@ -88,6 +88,9 @@ Our `action.yml` specifies to run the action using our `Dockerfile`. Github will
 We will be writing the code in python, and use [PyGithub](https://pygithub.readthedocs.io/en/stable/index.html#) for managing our Github resources. This is
 a Python library to use the Github API v3. 
 
+### Requirements
+run `pip install -r requirements.txt`
+
 ### github_utils.py
 - Implement get_latest_commit_message and commit_and_push
 - Use the PyGithub module, reference the documentation for [PullRequest](https://pygithub.readthedocs.io/en/stable/examples/PullRequest.html) and [Repository](https://pygithub.readthedocs.io/en/stable/examples/Repository.html)
@@ -100,6 +103,16 @@ a Python library to use the Github API v3.
 ### main.py
 - Follow the steps in the TODO list at the end of main.py
 
+## Testing
+To run the action open a new pull request and change the following step in the workflow:
+
+```
+      - name: Generate haiku art
+        uses: <YOUR_FORK>@<PR_BRANCH_NAME>
+```
+Changing this step to point to the current PR will allow you to see changes in the behaviour of the action immediatly when you push new code to the open PR.
+
 ## Useful links
 - [Creating a docker container action](https://docs.github.com/en/actions/sharing-automations/creating-actions/creating-a-docker-container-action)
 - [actions.yml](https://docs.github.com/en/actions/sharing-automations/creating-actions/metadata-syntax-for-github-actions)
+- [github actionc context](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs)
