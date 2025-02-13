@@ -10,7 +10,7 @@ jobs:
     name: Hermegås
     steps:
       - name: goosy
-        uses: henriettelienrebnor/Fagdag@more_test
+        uses: henriettelienrebnor/Fagdag@write_to_file
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
           PR_NUMBER: ${{ github.event.number }}
