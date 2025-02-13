@@ -1,5 +1,7 @@
 import os
 from github import Github, Auth
+from haiku import update_poetry
+from github_utils import commit_and_push
 #from dotenv import load_dotenv
 
 if __name__ == '__main__':
@@ -18,5 +20,10 @@ if __name__ == '__main__':
     repo = github.get_repo(repo_uri)
     pull_request = repo.get_pull(pr_number)
     branch = pull_request.head.ref 
-    pull_request.update_branch()
-        
+    
+    file_name = "poetry.md"
+    file_path = file_name.replace("/github/workspace/", "")
+    
+    update_poetry(file_path)
+    commit_and_push(repo, branch, file_path)
+            
