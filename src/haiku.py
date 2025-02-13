@@ -7,4 +7,4 @@ def update_poetry(file_path, isHaiku):
             file.write("Haiku")
         else:
             file.write("Not haiku")
-        
+    
