@@ -1,7 +1,7 @@
 import os
 from github import Github, Auth
-from haiku import update_poetry
-from github_utils import commit_and_push
+import haiku
+from github_utils import commit_and_push, get_commit_messages
 #from dotenv import load_dotenv
 
 if __name__ == '__main__':
@@ -24,6 +24,11 @@ if __name__ == '__main__':
     file_name = "poetry.md"
     file_path = file_name.replace("/github/workspace/", "")
     
-    update_poetry(file_path)
+
+    commit_messages = get_commit_messages(pull_request)
+    for message in commit_messages:
+        isHaiku = haiku.check_haiku(message)
+        haiku.update_poetry(file_path, isHaiku)
+        
     commit_and_push(repo, branch, file_path)
             
