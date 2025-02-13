@@ -23,6 +23,6 @@ def count_syllables(word):
         word = word[:-1]  
         
     # Count vowel groups
-    syllables = re.findall(r'[aeiouyøæå]+', word)
+    syllables = re.findall(r'[aeiouy]+', word)
     return max(1, len(syllables))  
 
