@@ -11,6 +11,7 @@ def commit_and_push(repo: Repository, target_branch:str, file_path: str) -> None
     with open(file_path) as f: new_file_content = f.read()
     remote_file = repo.get_contents(file_path, ref=target_branch)
     
+    
     repo.update_file(
         remote_file.path,
         commit_message,
