@@ -115,6 +115,7 @@ To run the action open a new pull request and change the following step in the w
 Changing this step to point to the current PR will allow you to see changes in the behaviour of the action immediatly when you push new code to the open PR.
 
 ## Useful links
+- [Understanding Github actions](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions)
 - [Creating a docker container action](https://docs.github.com/en/actions/sharing-automations/creating-actions/creating-a-docker-container-action)
 - [actions.yml](https://docs.github.com/en/actions/sharing-automations/creating-actions/metadata-syntax-for-github-actions)
 - [github actionc context](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs)
